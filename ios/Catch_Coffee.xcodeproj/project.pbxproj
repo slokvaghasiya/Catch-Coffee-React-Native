@@ -1,0 +1,925 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* Catch_CoffeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Catch_CoffeeTests.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-Catch_Coffee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Catch_Coffee.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		7699B88040F8A987B510C191 /* libPods-Catch_Coffee-Catch_CoffeeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Catch_Coffee-Catch_CoffeeTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		DC06A1F43EB94C71BD077D7E /* app_icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 315F994A6C794EE4901BDADB /* app_icons.ttf */; };
+		2B596221FE0242AC8EB03F1B /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE8BD902B5DE43378E7AD4AD /* Poppins-Black.ttf */; };
+		9F5B8ADDF92C4B749E88EB85 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 320DCD2ACBF64A888D61DB38 /* Poppins-Bold.ttf */; };
+		C95ACF7B70D64B4E94D413E9 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08E8739D4CEA40679A798041 /* Poppins-ExtraBold.ttf */; };
+		A5B409BFC36449EA827D5C84 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 229CDECA896A443B97C96A67 /* Poppins-ExtraLight.ttf */; };
+		D1350B9E3AE6419C86FDDBCA /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0DFC7C775B4632B1F47B3A /* Poppins-Light.ttf */; };
+		99DC4D031A534B5A804EC217 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E5E14DE8659478486B2AE7A /* Poppins-Medium.ttf */; };
+		E349267A9614428EA3B42501 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D4EB4C1BE741AABE67C37F /* Poppins-Regular.ttf */; };
+		B774404FF733495490BC594D /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3AC0E93C5C2D42AE93D70359 /* Poppins-SemiBold.ttf */; };
+		288ECDBCE11E41B7A6051CE7 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C32B769859842C7AEAD07E5 /* Poppins-Thin.ttf */; };
+		3BD7D3B460F84CC88ABB5C45 /* amazonpay.png in Resources */ = {isa = PBXBuildFile; fileRef = 452038C6FC4F48C58AE37DC3 /* amazonpay.png */; };
+		F296D12320EE414F86A608A6 /* applepay.png in Resources */ = {isa = PBXBuildFile; fileRef = 838B571287C64FE499E54E59 /* applepay.png */; };
+		55F3957A56EE432093396287 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 95F3DAD1F8694D54B7AF5724 /* avatar.png */; };
+		3771BB8E686C45EF9B923559 /* gpay.png in Resources */ = {isa = PBXBuildFile; fileRef = ED99AE7EF19D4372A47E509C /* gpay.png */; };
+		00ABA736AE9C49DDBA996977 /* americano_pic_1_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C224496003DA462387EA041C /* americano_pic_1_portrait.png */; };
+		C4E0321F8E48408BBB2CA1B6 /* americano_pic_2_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 4789286732BC47D988179AF0 /* americano_pic_2_portrait.png */; };
+		2320F286815E4434B5D9DAA6 /* americano_pic_3_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 629F088999834E1E8FE404A8 /* americano_pic_3_portrait.png */; };
+		9E99B9DD225A493BB52D9723 /* americano_pic_1_square.png in Resources */ = {isa = PBXBuildFile; fileRef = FC60615AFE8242269DA033BB /* americano_pic_1_square.png */; };
+		990AAEF41EDD4BDA8AC157D8 /* americano_pic_2_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8DFC49DE354DB99174DFF9 /* americano_pic_2_square.png */; };
+		AC1417EB70C04E9FBDCC05DE /* americano_pic_3_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 49678C9EFE1047F08CD3986F /* americano_pic_3_square.png */; };
+		D7343D14744D4B469CB1B1FC /* arabica_coffee_beans_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = A3A4199B73014D2A9BB04E81 /* arabica_coffee_beans_portrait.png */; };
+		8BF14287D7DE4CA8A39B130E /* arabica_coffee_beans_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 5514EAD91B4E4494962D24AC /* arabica_coffee_beans_square.png */; };
+		98992BE0155E483083B44D38 /* black_coffee_pic_1_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 83FDC5D780774FE4A5F3BA18 /* black_coffee_pic_1_portrait.png */; };
+		C0A0E1E7C7844B238459FCB2 /* black_coffee_pic_2_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7EED844FED4BE7AEFECFB6 /* black_coffee_pic_2_portrait.png */; };
+		95AE518B133A406AACA31229 /* black_coffee_pic_3_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = A7A888C4C76E4C60BD53A704 /* black_coffee_pic_3_portrait.png */; };
+		A0CCB0BD287E42E1A780BF44 /* black_coffee_pic_1_square.png in Resources */ = {isa = PBXBuildFile; fileRef = EB09E9E6428D4CE1919BC2F5 /* black_coffee_pic_1_square.png */; };
+		4B3D5F05F54442BB95A6E033 /* black_coffee_pic_2_square.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D299F1FFB44359A018ED2D /* black_coffee_pic_2_square.png */; };
+		31A514C1886648B0A06BC16A /* black_coffee_pic_3_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 81153BB76A9048669D087991 /* black_coffee_pic_3_square.png */; };
+		068A81CB828D498881027CBB /* cappuccino_pic_1_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FC661230BAB4A1CAFC58960 /* cappuccino_pic_1_portrait.png */; };
+		3E781F73D36A4A55A1AE1E48 /* cappuccino_pic_2_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBE4F3933D842298E00A8E9 /* cappuccino_pic_2_portrait.png */; };
+		294EB40D4E8C4031B5C72F17 /* cappuccino_pic_3_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = B41BB52029B241E7BDF5D4DE /* cappuccino_pic_3_portrait.png */; };
+		234D0A3379EA40298F96E89A /* cappuccino_pic_1_square.png in Resources */ = {isa = PBXBuildFile; fileRef = D18C7969BE6949FABB3F7149 /* cappuccino_pic_1_square.png */; };
+		478BB30D59DF4C4C8E2F4EBE /* cappuccino_pic_2_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC35E68A3734BF3B4B7FB9A /* cappuccino_pic_2_square.png */; };
+		04486CEAD16E4A3EB2209014 /* cappuccino_pic_3_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0671B7E1F0448983FA481B /* cappuccino_pic_3_square.png */; };
+		F094E2BF61AB44DBBD6DCE9B /* espresso_pic_1_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E8E8D8E2044867A135C08B /* espresso_pic_1_portrait.png */; };
+		2C23A7DBA2BC451E98B3EE0C /* espresso_pic_2_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = A70ACA4D014A499E8E75D030 /* espresso_pic_2_portrait.png */; };
+		EB9FB6924288414A89636760 /* espresso_pic_3_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D35839D51864AE2A934E63B /* espresso_pic_3_portrait.png */; };
+		3EE242ED03FE452C89CD731E /* espresso_pic_1_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D3930207D4A0A9497F7C0 /* espresso_pic_1_square.png */; };
+		C0D845967DE54205B081EA65 /* espresso_pic_2_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 280DF7E0C63C4929BBBE0E1A /* espresso_pic_2_square.png */; };
+		F5DFD8614B8646C8AA1E1952 /* espresso_pic_3_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D65F2A7EBA6415C8B432781 /* espresso_pic_3_square.png */; };
+		29D540FE782B4EA0AC365927 /* excelsa_coffee_beans_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF7EB93B6864A92961262B5 /* excelsa_coffee_beans_portrait.png */; };
+		4F294DAFE9AF406FBE445AF3 /* excelsa_coffee_beans_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CED4F8936C84794ACBC895D /* excelsa_coffee_beans_square.png */; };
+		4FA2798D421245C99C469D0D /* latte_pic_1_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = B75EDB2EF3F84967B5FE068A /* latte_pic_1_portrait.png */; };
+		743CFB6FB012440F952326DF /* latte_pic_2_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE0410BC8DF4CAF81C1927C /* latte_pic_2_portrait.png */; };
+		3126A7650A07464BA4801FF7 /* latte_pic_3_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 174042F618534234978B8ACD /* latte_pic_3_portrait.png */; };
+		6056B91B15D94AACBF12D7CE /* latte_pic_1_square.png in Resources */ = {isa = PBXBuildFile; fileRef = AA92B8926A6F47BAA6524F72 /* latte_pic_1_square.png */; };
+		7560DFB953D84C2A9BC6F1EC /* latte_pic_2_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 067F626DE183452180DAD69B /* latte_pic_2_square.png */; };
+		DAF06F7D341B4C2EA1A0D78D /* latte_pic_3_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDF87F6DAD4075AFB0365F /* latte_pic_3_square.png */; };
+		F161214896924A49BEFAF570 /* liberica_coffee_beans_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0002B164374282802059DB /* liberica_coffee_beans_portrait.png */; };
+		AB7B2183D77946DF87D9D84E /* liberica_coffee_beans_square.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF1C806C3224187A08FFA93 /* liberica_coffee_beans_square.png */; };
+		629B20F6CBD64E8F9264767A /* macchiato_pic_1_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A03EF93FE94F5D9E4A60A9 /* macchiato_pic_1_portrait.png */; };
+		F378E4B183294AA6BDA02521 /* macchiato_pic_2_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 03CC46D8BEEC467DBBFBEDC6 /* macchiato_pic_2_portrait.png */; };
+		780F92B3AC9C40239751EF4C /* macchiato_pic_3_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = A495B0ABEF1045CFABE0BB7B /* macchiato_pic_3_portrait.png */; };
+		28B26E8861D44A33B0DECA67 /* macchiato_pic_1_square.png in Resources */ = {isa = PBXBuildFile; fileRef = E44E153C2A4B4732A8CB2D6D /* macchiato_pic_1_square.png */; };
+		2697FAC4EACC4DB085016BEA /* macchiato_pic_2_square.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBEE9F616D14688A220F7F2 /* macchiato_pic_2_square.png */; };
+		D51C5D3E889849E985EC72AF /* macchiato_pic_3_square.png in Resources */ = {isa = PBXBuildFile; fileRef = BF933A6E7B3E467791D0123F /* macchiato_pic_3_square.png */; };
+		90E2F264D6FC42459EA9A0F7 /* robusta_coffee_beans_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E37038ED23741F687F2F9A8 /* robusta_coffee_beans_portrait.png */; };
+		2C860303F2E842C0A0E2C11F /* robusta_coffee_beans_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 8300065B49294A209618A0EF /* robusta_coffee_beans_square.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = Catch_Coffee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E356EE1AD99517003FC87E /* Catch_CoffeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Catch_CoffeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* Catch_CoffeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Catch_CoffeeTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Catch_Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catch_Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Catch_Coffee/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Catch_Coffee/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Catch_Coffee/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Catch_Coffee/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Catch_Coffee/main.m; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Catch_Coffee-Catch_CoffeeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Catch_Coffee-Catch_CoffeeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4392A12AC88292D35C810B /* Pods-Catch_Coffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catch_Coffee.debug.xcconfig"; path = "Target Support Files/Pods-Catch_Coffee/Pods-Catch_Coffee.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-Catch_Coffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catch_Coffee.release.xcconfig"; path = "Target Support Files/Pods-Catch_Coffee/Pods-Catch_Coffee.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-Catch_Coffee-Catch_CoffeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catch_Coffee-Catch_CoffeeTests.debug.xcconfig"; path = "Target Support Files/Pods-Catch_Coffee-Catch_CoffeeTests/Pods-Catch_Coffee-Catch_CoffeeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-Catch_Coffee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Catch_Coffee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Catch_Coffee/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-Catch_Coffee-Catch_CoffeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catch_Coffee-Catch_CoffeeTests.release.xcconfig"; path = "Target Support Files/Pods-Catch_Coffee-Catch_CoffeeTests/Pods-Catch_Coffee-Catch_CoffeeTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		315F994A6C794EE4901BDADB /* app_icons.ttf */ = {isa = PBXFileReference; name = "app_icons.ttf"; path = "../src/assets/fonts/app_icons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BE8BD902B5DE43378E7AD4AD /* Poppins-Black.ttf */ = {isa = PBXFileReference; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		320DCD2ACBF64A888D61DB38 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		08E8739D4CEA40679A798041 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		229CDECA896A443B97C96A67 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1F0DFC7C775B4632B1F47B3A /* Poppins-Light.ttf */ = {isa = PBXFileReference; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2E5E14DE8659478486B2AE7A /* Poppins-Medium.ttf */ = {isa = PBXFileReference; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		04D4EB4C1BE741AABE67C37F /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3AC0E93C5C2D42AE93D70359 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6C32B769859842C7AEAD07E5 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		452038C6FC4F48C58AE37DC3 /* amazonpay.png */ = {isa = PBXFileReference; name = "amazonpay.png"; path = "../src/assets/app_images/amazonpay.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		838B571287C64FE499E54E59 /* applepay.png */ = {isa = PBXFileReference; name = "applepay.png"; path = "../src/assets/app_images/applepay.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		95F3DAD1F8694D54B7AF5724 /* avatar.png */ = {isa = PBXFileReference; name = "avatar.png"; path = "../src/assets/app_images/avatar.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ED99AE7EF19D4372A47E509C /* gpay.png */ = {isa = PBXFileReference; name = "gpay.png"; path = "../src/assets/app_images/gpay.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C224496003DA462387EA041C /* americano_pic_1_portrait.png */ = {isa = PBXFileReference; name = "americano_pic_1_portrait.png"; path = "../src/assets/coffee_assets/americano/portrait/americano_pic_1_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4789286732BC47D988179AF0 /* americano_pic_2_portrait.png */ = {isa = PBXFileReference; name = "americano_pic_2_portrait.png"; path = "../src/assets/coffee_assets/americano/portrait/americano_pic_2_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		629F088999834E1E8FE404A8 /* americano_pic_3_portrait.png */ = {isa = PBXFileReference; name = "americano_pic_3_portrait.png"; path = "../src/assets/coffee_assets/americano/portrait/americano_pic_3_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FC60615AFE8242269DA033BB /* americano_pic_1_square.png */ = {isa = PBXFileReference; name = "americano_pic_1_square.png"; path = "../src/assets/coffee_assets/americano/square/americano_pic_1_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6D8DFC49DE354DB99174DFF9 /* americano_pic_2_square.png */ = {isa = PBXFileReference; name = "americano_pic_2_square.png"; path = "../src/assets/coffee_assets/americano/square/americano_pic_2_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		49678C9EFE1047F08CD3986F /* americano_pic_3_square.png */ = {isa = PBXFileReference; name = "americano_pic_3_square.png"; path = "../src/assets/coffee_assets/americano/square/americano_pic_3_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A3A4199B73014D2A9BB04E81 /* arabica_coffee_beans_portrait.png */ = {isa = PBXFileReference; name = "arabica_coffee_beans_portrait.png"; path = "../src/assets/coffee_assets/arabica_coffee_beans/arabica_coffee_beans_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5514EAD91B4E4494962D24AC /* arabica_coffee_beans_square.png */ = {isa = PBXFileReference; name = "arabica_coffee_beans_square.png"; path = "../src/assets/coffee_assets/arabica_coffee_beans/arabica_coffee_beans_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		83FDC5D780774FE4A5F3BA18 /* black_coffee_pic_1_portrait.png */ = {isa = PBXFileReference; name = "black_coffee_pic_1_portrait.png"; path = "../src/assets/coffee_assets/black_coffee/portrait/black_coffee_pic_1_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9D7EED844FED4BE7AEFECFB6 /* black_coffee_pic_2_portrait.png */ = {isa = PBXFileReference; name = "black_coffee_pic_2_portrait.png"; path = "../src/assets/coffee_assets/black_coffee/portrait/black_coffee_pic_2_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A7A888C4C76E4C60BD53A704 /* black_coffee_pic_3_portrait.png */ = {isa = PBXFileReference; name = "black_coffee_pic_3_portrait.png"; path = "../src/assets/coffee_assets/black_coffee/portrait/black_coffee_pic_3_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EB09E9E6428D4CE1919BC2F5 /* black_coffee_pic_1_square.png */ = {isa = PBXFileReference; name = "black_coffee_pic_1_square.png"; path = "../src/assets/coffee_assets/black_coffee/square/black_coffee_pic_1_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0D299F1FFB44359A018ED2D /* black_coffee_pic_2_square.png */ = {isa = PBXFileReference; name = "black_coffee_pic_2_square.png"; path = "../src/assets/coffee_assets/black_coffee/square/black_coffee_pic_2_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		81153BB76A9048669D087991 /* black_coffee_pic_3_square.png */ = {isa = PBXFileReference; name = "black_coffee_pic_3_square.png"; path = "../src/assets/coffee_assets/black_coffee/square/black_coffee_pic_3_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0FC661230BAB4A1CAFC58960 /* cappuccino_pic_1_portrait.png */ = {isa = PBXFileReference; name = "cappuccino_pic_1_portrait.png"; path = "../src/assets/coffee_assets/cappuccino/portrait/cappuccino_pic_1_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4CBE4F3933D842298E00A8E9 /* cappuccino_pic_2_portrait.png */ = {isa = PBXFileReference; name = "cappuccino_pic_2_portrait.png"; path = "../src/assets/coffee_assets/cappuccino/portrait/cappuccino_pic_2_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B41BB52029B241E7BDF5D4DE /* cappuccino_pic_3_portrait.png */ = {isa = PBXFileReference; name = "cappuccino_pic_3_portrait.png"; path = "../src/assets/coffee_assets/cappuccino/portrait/cappuccino_pic_3_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D18C7969BE6949FABB3F7149 /* cappuccino_pic_1_square.png */ = {isa = PBXFileReference; name = "cappuccino_pic_1_square.png"; path = "../src/assets/coffee_assets/cappuccino/square/cappuccino_pic_1_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2DC35E68A3734BF3B4B7FB9A /* cappuccino_pic_2_square.png */ = {isa = PBXFileReference; name = "cappuccino_pic_2_square.png"; path = "../src/assets/coffee_assets/cappuccino/square/cappuccino_pic_2_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9D0671B7E1F0448983FA481B /* cappuccino_pic_3_square.png */ = {isa = PBXFileReference; name = "cappuccino_pic_3_square.png"; path = "../src/assets/coffee_assets/cappuccino/square/cappuccino_pic_3_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A5E8E8D8E2044867A135C08B /* espresso_pic_1_portrait.png */ = {isa = PBXFileReference; name = "espresso_pic_1_portrait.png"; path = "../src/assets/coffee_assets/espresso/portrait/espresso_pic_1_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A70ACA4D014A499E8E75D030 /* espresso_pic_2_portrait.png */ = {isa = PBXFileReference; name = "espresso_pic_2_portrait.png"; path = "../src/assets/coffee_assets/espresso/portrait/espresso_pic_2_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1D35839D51864AE2A934E63B /* espresso_pic_3_portrait.png */ = {isa = PBXFileReference; name = "espresso_pic_3_portrait.png"; path = "../src/assets/coffee_assets/espresso/portrait/espresso_pic_3_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5D9D3930207D4A0A9497F7C0 /* espresso_pic_1_square.png */ = {isa = PBXFileReference; name = "espresso_pic_1_square.png"; path = "../src/assets/coffee_assets/espresso/square/espresso_pic_1_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		280DF7E0C63C4929BBBE0E1A /* espresso_pic_2_square.png */ = {isa = PBXFileReference; name = "espresso_pic_2_square.png"; path = "../src/assets/coffee_assets/espresso/square/espresso_pic_2_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9D65F2A7EBA6415C8B432781 /* espresso_pic_3_square.png */ = {isa = PBXFileReference; name = "espresso_pic_3_square.png"; path = "../src/assets/coffee_assets/espresso/square/espresso_pic_3_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FAF7EB93B6864A92961262B5 /* excelsa_coffee_beans_portrait.png */ = {isa = PBXFileReference; name = "excelsa_coffee_beans_portrait.png"; path = "../src/assets/coffee_assets/excelsa_coffee_beans/excelsa_coffee_beans_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2CED4F8936C84794ACBC895D /* excelsa_coffee_beans_square.png */ = {isa = PBXFileReference; name = "excelsa_coffee_beans_square.png"; path = "../src/assets/coffee_assets/excelsa_coffee_beans/excelsa_coffee_beans_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B75EDB2EF3F84967B5FE068A /* latte_pic_1_portrait.png */ = {isa = PBXFileReference; name = "latte_pic_1_portrait.png"; path = "../src/assets/coffee_assets/latte/portrait/latte_pic_1_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3DE0410BC8DF4CAF81C1927C /* latte_pic_2_portrait.png */ = {isa = PBXFileReference; name = "latte_pic_2_portrait.png"; path = "../src/assets/coffee_assets/latte/portrait/latte_pic_2_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		174042F618534234978B8ACD /* latte_pic_3_portrait.png */ = {isa = PBXFileReference; name = "latte_pic_3_portrait.png"; path = "../src/assets/coffee_assets/latte/portrait/latte_pic_3_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AA92B8926A6F47BAA6524F72 /* latte_pic_1_square.png */ = {isa = PBXFileReference; name = "latte_pic_1_square.png"; path = "../src/assets/coffee_assets/latte/square/latte_pic_1_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		067F626DE183452180DAD69B /* latte_pic_2_square.png */ = {isa = PBXFileReference; name = "latte_pic_2_square.png"; path = "../src/assets/coffee_assets/latte/square/latte_pic_2_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7DFDF87F6DAD4075AFB0365F /* latte_pic_3_square.png */ = {isa = PBXFileReference; name = "latte_pic_3_square.png"; path = "../src/assets/coffee_assets/latte/square/latte_pic_3_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0B0002B164374282802059DB /* liberica_coffee_beans_portrait.png */ = {isa = PBXFileReference; name = "liberica_coffee_beans_portrait.png"; path = "../src/assets/coffee_assets/liberica_coffee_beans/liberica_coffee_beans_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ADF1C806C3224187A08FFA93 /* liberica_coffee_beans_square.png */ = {isa = PBXFileReference; name = "liberica_coffee_beans_square.png"; path = "../src/assets/coffee_assets/liberica_coffee_beans/liberica_coffee_beans_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C2A03EF93FE94F5D9E4A60A9 /* macchiato_pic_1_portrait.png */ = {isa = PBXFileReference; name = "macchiato_pic_1_portrait.png"; path = "../src/assets/coffee_assets/macchiato/portrait/macchiato_pic_1_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		03CC46D8BEEC467DBBFBEDC6 /* macchiato_pic_2_portrait.png */ = {isa = PBXFileReference; name = "macchiato_pic_2_portrait.png"; path = "../src/assets/coffee_assets/macchiato/portrait/macchiato_pic_2_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A495B0ABEF1045CFABE0BB7B /* macchiato_pic_3_portrait.png */ = {isa = PBXFileReference; name = "macchiato_pic_3_portrait.png"; path = "../src/assets/coffee_assets/macchiato/portrait/macchiato_pic_3_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E44E153C2A4B4732A8CB2D6D /* macchiato_pic_1_square.png */ = {isa = PBXFileReference; name = "macchiato_pic_1_square.png"; path = "../src/assets/coffee_assets/macchiato/square/macchiato_pic_1_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BEBEE9F616D14688A220F7F2 /* macchiato_pic_2_square.png */ = {isa = PBXFileReference; name = "macchiato_pic_2_square.png"; path = "../src/assets/coffee_assets/macchiato/square/macchiato_pic_2_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BF933A6E7B3E467791D0123F /* macchiato_pic_3_square.png */ = {isa = PBXFileReference; name = "macchiato_pic_3_square.png"; path = "../src/assets/coffee_assets/macchiato/square/macchiato_pic_3_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E37038ED23741F687F2F9A8 /* robusta_coffee_beans_portrait.png */ = {isa = PBXFileReference; name = "robusta_coffee_beans_portrait.png"; path = "../src/assets/coffee_assets/robusta_coffee_beans/robusta_coffee_beans_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8300065B49294A209618A0EF /* robusta_coffee_beans_square.png */ = {isa = PBXFileReference; name = "robusta_coffee_beans_square.png"; path = "../src/assets/coffee_assets/robusta_coffee_beans/robusta_coffee_beans_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7699B88040F8A987B510C191 /* libPods-Catch_Coffee-Catch_CoffeeTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C80B921A6F3F58F76C31292 /* libPods-Catch_Coffee.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* Catch_CoffeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* Catch_CoffeeTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = Catch_CoffeeTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* Catch_Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = Catch_Coffee;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-Catch_Coffee.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-Catch_Coffee-Catch_CoffeeTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* Catch_Coffee */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* Catch_CoffeeTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				F62678A5AE8647C9BA505354 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* Catch_Coffee.app */,
+				00E356EE1AD99517003FC87E /* Catch_CoffeeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-Catch_Coffee.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-Catch_Coffee.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-Catch_Coffee-Catch_CoffeeTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-Catch_Coffee-Catch_CoffeeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F62678A5AE8647C9BA505354 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				315F994A6C794EE4901BDADB /* app_icons.ttf */,
+				BE8BD902B5DE43378E7AD4AD /* Poppins-Black.ttf */,
+				320DCD2ACBF64A888D61DB38 /* Poppins-Bold.ttf */,
+				08E8739D4CEA40679A798041 /* Poppins-ExtraBold.ttf */,
+				229CDECA896A443B97C96A67 /* Poppins-ExtraLight.ttf */,
+				1F0DFC7C775B4632B1F47B3A /* Poppins-Light.ttf */,
+				2E5E14DE8659478486B2AE7A /* Poppins-Medium.ttf */,
+				04D4EB4C1BE741AABE67C37F /* Poppins-Regular.ttf */,
+				3AC0E93C5C2D42AE93D70359 /* Poppins-SemiBold.ttf */,
+				6C32B769859842C7AEAD07E5 /* Poppins-Thin.ttf */,
+				452038C6FC4F48C58AE37DC3 /* amazonpay.png */,
+				838B571287C64FE499E54E59 /* applepay.png */,
+				95F3DAD1F8694D54B7AF5724 /* avatar.png */,
+				ED99AE7EF19D4372A47E509C /* gpay.png */,
+				C224496003DA462387EA041C /* americano_pic_1_portrait.png */,
+				4789286732BC47D988179AF0 /* americano_pic_2_portrait.png */,
+				629F088999834E1E8FE404A8 /* americano_pic_3_portrait.png */,
+				FC60615AFE8242269DA033BB /* americano_pic_1_square.png */,
+				6D8DFC49DE354DB99174DFF9 /* americano_pic_2_square.png */,
+				49678C9EFE1047F08CD3986F /* americano_pic_3_square.png */,
+				A3A4199B73014D2A9BB04E81 /* arabica_coffee_beans_portrait.png */,
+				5514EAD91B4E4494962D24AC /* arabica_coffee_beans_square.png */,
+				83FDC5D780774FE4A5F3BA18 /* black_coffee_pic_1_portrait.png */,
+				9D7EED844FED4BE7AEFECFB6 /* black_coffee_pic_2_portrait.png */,
+				A7A888C4C76E4C60BD53A704 /* black_coffee_pic_3_portrait.png */,
+				EB09E9E6428D4CE1919BC2F5 /* black_coffee_pic_1_square.png */,
+				F0D299F1FFB44359A018ED2D /* black_coffee_pic_2_square.png */,
+				81153BB76A9048669D087991 /* black_coffee_pic_3_square.png */,
+				0FC661230BAB4A1CAFC58960 /* cappuccino_pic_1_portrait.png */,
+				4CBE4F3933D842298E00A8E9 /* cappuccino_pic_2_portrait.png */,
+				B41BB52029B241E7BDF5D4DE /* cappuccino_pic_3_portrait.png */,
+				D18C7969BE6949FABB3F7149 /* cappuccino_pic_1_square.png */,
+				2DC35E68A3734BF3B4B7FB9A /* cappuccino_pic_2_square.png */,
+				9D0671B7E1F0448983FA481B /* cappuccino_pic_3_square.png */,
+				A5E8E8D8E2044867A135C08B /* espresso_pic_1_portrait.png */,
+				A70ACA4D014A499E8E75D030 /* espresso_pic_2_portrait.png */,
+				1D35839D51864AE2A934E63B /* espresso_pic_3_portrait.png */,
+				5D9D3930207D4A0A9497F7C0 /* espresso_pic_1_square.png */,
+				280DF7E0C63C4929BBBE0E1A /* espresso_pic_2_square.png */,
+				9D65F2A7EBA6415C8B432781 /* espresso_pic_3_square.png */,
+				FAF7EB93B6864A92961262B5 /* excelsa_coffee_beans_portrait.png */,
+				2CED4F8936C84794ACBC895D /* excelsa_coffee_beans_square.png */,
+				B75EDB2EF3F84967B5FE068A /* latte_pic_1_portrait.png */,
+				3DE0410BC8DF4CAF81C1927C /* latte_pic_2_portrait.png */,
+				174042F618534234978B8ACD /* latte_pic_3_portrait.png */,
+				AA92B8926A6F47BAA6524F72 /* latte_pic_1_square.png */,
+				067F626DE183452180DAD69B /* latte_pic_2_square.png */,
+				7DFDF87F6DAD4075AFB0365F /* latte_pic_3_square.png */,
+				0B0002B164374282802059DB /* liberica_coffee_beans_portrait.png */,
+				ADF1C806C3224187A08FFA93 /* liberica_coffee_beans_square.png */,
+				C2A03EF93FE94F5D9E4A60A9 /* macchiato_pic_1_portrait.png */,
+				03CC46D8BEEC467DBBFBEDC6 /* macchiato_pic_2_portrait.png */,
+				A495B0ABEF1045CFABE0BB7B /* macchiato_pic_3_portrait.png */,
+				E44E153C2A4B4732A8CB2D6D /* macchiato_pic_1_square.png */,
+				BEBEE9F616D14688A220F7F2 /* macchiato_pic_2_square.png */,
+				BF933A6E7B3E467791D0123F /* macchiato_pic_3_square.png */,
+				5E37038ED23741F687F2F9A8 /* robusta_coffee_beans_portrait.png */,
+				8300065B49294A209618A0EF /* robusta_coffee_beans_square.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* Catch_CoffeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Catch_CoffeeTests" */;
+			buildPhases = (
+				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
+				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = Catch_CoffeeTests;
+			productName = Catch_CoffeeTests;
+			productReference = 00E356EE1AD99517003FC87E /* Catch_CoffeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* Catch_Coffee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Catch_Coffee" */;
+			buildPhases = (
+				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
+				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Catch_Coffee;
+			productName = Catch_Coffee;
+			productReference = 13B07F961A680F5B00A75B9A /* Catch_Coffee.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Catch_Coffee" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* Catch_Coffee */,
+				00E356ED1AD99517003FC87E /* Catch_CoffeeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DC06A1F43EB94C71BD077D7E /* app_icons.ttf in Resources */,
+				2B596221FE0242AC8EB03F1B /* Poppins-Black.ttf in Resources */,
+				9F5B8ADDF92C4B749E88EB85 /* Poppins-Bold.ttf in Resources */,
+				C95ACF7B70D64B4E94D413E9 /* Poppins-ExtraBold.ttf in Resources */,
+				A5B409BFC36449EA827D5C84 /* Poppins-ExtraLight.ttf in Resources */,
+				D1350B9E3AE6419C86FDDBCA /* Poppins-Light.ttf in Resources */,
+				99DC4D031A534B5A804EC217 /* Poppins-Medium.ttf in Resources */,
+				E349267A9614428EA3B42501 /* Poppins-Regular.ttf in Resources */,
+				B774404FF733495490BC594D /* Poppins-SemiBold.ttf in Resources */,
+				288ECDBCE11E41B7A6051CE7 /* Poppins-Thin.ttf in Resources */,
+				3BD7D3B460F84CC88ABB5C45 /* amazonpay.png in Resources */,
+				F296D12320EE414F86A608A6 /* applepay.png in Resources */,
+				55F3957A56EE432093396287 /* avatar.png in Resources */,
+				3771BB8E686C45EF9B923559 /* gpay.png in Resources */,
+				00ABA736AE9C49DDBA996977 /* americano_pic_1_portrait.png in Resources */,
+				C4E0321F8E48408BBB2CA1B6 /* americano_pic_2_portrait.png in Resources */,
+				2320F286815E4434B5D9DAA6 /* americano_pic_3_portrait.png in Resources */,
+				9E99B9DD225A493BB52D9723 /* americano_pic_1_square.png in Resources */,
+				990AAEF41EDD4BDA8AC157D8 /* americano_pic_2_square.png in Resources */,
+				AC1417EB70C04E9FBDCC05DE /* americano_pic_3_square.png in Resources */,
+				D7343D14744D4B469CB1B1FC /* arabica_coffee_beans_portrait.png in Resources */,
+				8BF14287D7DE4CA8A39B130E /* arabica_coffee_beans_square.png in Resources */,
+				98992BE0155E483083B44D38 /* black_coffee_pic_1_portrait.png in Resources */,
+				C0A0E1E7C7844B238459FCB2 /* black_coffee_pic_2_portrait.png in Resources */,
+				95AE518B133A406AACA31229 /* black_coffee_pic_3_portrait.png in Resources */,
+				A0CCB0BD287E42E1A780BF44 /* black_coffee_pic_1_square.png in Resources */,
+				4B3D5F05F54442BB95A6E033 /* black_coffee_pic_2_square.png in Resources */,
+				31A514C1886648B0A06BC16A /* black_coffee_pic_3_square.png in Resources */,
+				068A81CB828D498881027CBB /* cappuccino_pic_1_portrait.png in Resources */,
+				3E781F73D36A4A55A1AE1E48 /* cappuccino_pic_2_portrait.png in Resources */,
+				294EB40D4E8C4031B5C72F17 /* cappuccino_pic_3_portrait.png in Resources */,
+				234D0A3379EA40298F96E89A /* cappuccino_pic_1_square.png in Resources */,
+				478BB30D59DF4C4C8E2F4EBE /* cappuccino_pic_2_square.png in Resources */,
+				04486CEAD16E4A3EB2209014 /* cappuccino_pic_3_square.png in Resources */,
+				F094E2BF61AB44DBBD6DCE9B /* espresso_pic_1_portrait.png in Resources */,
+				2C23A7DBA2BC451E98B3EE0C /* espresso_pic_2_portrait.png in Resources */,
+				EB9FB6924288414A89636760 /* espresso_pic_3_portrait.png in Resources */,
+				3EE242ED03FE452C89CD731E /* espresso_pic_1_square.png in Resources */,
+				C0D845967DE54205B081EA65 /* espresso_pic_2_square.png in Resources */,
+				F5DFD8614B8646C8AA1E1952 /* espresso_pic_3_square.png in Resources */,
+				29D540FE782B4EA0AC365927 /* excelsa_coffee_beans_portrait.png in Resources */,
+				4F294DAFE9AF406FBE445AF3 /* excelsa_coffee_beans_square.png in Resources */,
+				4FA2798D421245C99C469D0D /* latte_pic_1_portrait.png in Resources */,
+				743CFB6FB012440F952326DF /* latte_pic_2_portrait.png in Resources */,
+				3126A7650A07464BA4801FF7 /* latte_pic_3_portrait.png in Resources */,
+				6056B91B15D94AACBF12D7CE /* latte_pic_1_square.png in Resources */,
+				7560DFB953D84C2A9BC6F1EC /* latte_pic_2_square.png in Resources */,
+				DAF06F7D341B4C2EA1A0D78D /* latte_pic_3_square.png in Resources */,
+				F161214896924A49BEFAF570 /* liberica_coffee_beans_portrait.png in Resources */,
+				AB7B2183D77946DF87D9D84E /* liberica_coffee_beans_square.png in Resources */,
+				629B20F6CBD64E8F9264767A /* macchiato_pic_1_portrait.png in Resources */,
+				F378E4B183294AA6BDA02521 /* macchiato_pic_2_portrait.png in Resources */,
+				780F92B3AC9C40239751EF4C /* macchiato_pic_3_portrait.png in Resources */,
+				28B26E8861D44A33B0DECA67 /* macchiato_pic_1_square.png in Resources */,
+				2697FAC4EACC4DB085016BEA /* macchiato_pic_2_square.png in Resources */,
+				D51C5D3E889849E985EC72AF /* macchiato_pic_3_square.png in Resources */,
+				90E2F264D6FC42459EA9A0F7 /* robusta_coffee_beans_portrait.png in Resources */,
+				2C860303F2E842C0A0E2C11F /* robusta_coffee_beans_square.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee/Pods-Catch_Coffee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee/Pods-Catch_Coffee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee/Pods-Catch_Coffee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Catch_Coffee-Catch_CoffeeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Catch_Coffee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee-Catch_CoffeeTests/Pods-Catch_Coffee-Catch_CoffeeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee-Catch_CoffeeTests/Pods-Catch_Coffee-Catch_CoffeeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee-Catch_CoffeeTests/Pods-Catch_Coffee-Catch_CoffeeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee/Pods-Catch_Coffee-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee/Pods-Catch_Coffee-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee/Pods-Catch_Coffee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee-Catch_CoffeeTests/Pods-Catch_Coffee-Catch_CoffeeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee-Catch_CoffeeTests/Pods-Catch_Coffee-Catch_CoffeeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Catch_Coffee-Catch_CoffeeTests/Pods-Catch_Coffee-Catch_CoffeeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* Catch_CoffeeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* Catch_Coffee */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Catch_Coffee-Catch_CoffeeTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Catch_CoffeeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catch_Coffee.app/Catch_Coffee";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Catch_Coffee-Catch_CoffeeTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = Catch_CoffeeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catch_Coffee.app/Catch_Coffee";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Catch_Coffee.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Catch_Coffee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = Catch_Coffee;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Catch_Coffee.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Catch_Coffee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = Catch_Coffee;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Catch_CoffeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Catch_Coffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Catch_Coffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
