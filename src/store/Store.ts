@@ -13,7 +13,7 @@ export const useStore = create(
             CartPrice: 0,
             FavoriteLIst: [],
             CartList: [],
-            OrderHistoryList: []
+            OrderHistoryList: [],
         }),
         {
             name: 'coffee-app',
