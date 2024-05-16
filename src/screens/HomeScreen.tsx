@@ -30,7 +30,7 @@ const getCoffeeList = (category: string, data: any) => {
   }
 }
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}: any) => {
 
   const CoffeeList = useStore((state: any) => state.CoffeeList)
   const BeanList = useStore((state: any) => state.BeansList)
@@ -51,7 +51,7 @@ const HomeScreen = () => {
       })
       setcategoryIndex({ index: 0, category: categories[0] })
       setSortedCoffee([
-        ...CoffeeList.filter((item: any) => 
+        ...CoffeeList.filter((item: any) =>
           item.name.toLowerCase().includes(search.toLowerCase())
         )])
     }
@@ -79,10 +79,10 @@ const HomeScreen = () => {
 
         {/* Search Input */}
         <View style={styles.InputContainer} >
-          <TouchableOpacity 
-          onPress={() => {
-            searchCoffee(searchText)
-          }} >
+          <TouchableOpacity
+            onPress={() => {
+              searchCoffee(searchText)
+            }} >
             <CustomeIcon
               style={styles.InputIcon}
               name='search'
@@ -159,7 +159,9 @@ const HomeScreen = () => {
           keyExtractor={item => item.id}
           renderItem={({ item }) => {
             return (
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => {
+                navigation.push("Details")
+              }} >
                 <CoffeeCard
                   id={item.id}
                   index={item.index}
@@ -189,7 +191,9 @@ const HomeScreen = () => {
           keyExtractor={item => item.id}
           renderItem={({ item }) => {
             return (
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => {
+                navigation.push("Details")
+              }} >
                 <CoffeeCard
                   id={item.id}
                   index={item.index}
@@ -271,11 +275,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: SPACING.space_30,
     paddingVertical: SPACING.space_20
   },
-  EmptyListContainer:{
-    width:Dimensions.get("window").width - SPACING.space_30 * 2,
-    alignItems:"center",
-    justifyContent:"center",
-    paddingVertical:SPACING.space_36 * 2,
+  EmptyListContainer: {
+    width: Dimensions.get("window").width - SPACING.space_30 * 2,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: SPACING.space_36 * 2,
   },
   CoffeeBeansTitle: {
     fontSize: FONTSIZE.size_18,
@@ -284,7 +288,7 @@ const styles = StyleSheet.create({
     fontFamily: FONTFAMILY.poppins_medium,
     color: COLORS.secondaryLightGreyHex
   },
-  
+
 })
 
 export default HomeScreen;
