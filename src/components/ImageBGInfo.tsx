@@ -1,7 +1,8 @@
 import { ImageBackground, ImageProps, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import GradiantBGIcon from './GradiantBGIcon'
-import { COLORS, FONTSIZE, SPACING } from '../theme/theme'
+import { BORDERRADIUS, COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme'
+import CustomeIcon from './CustomeIcon'
 
 interface ImageBGInfoProps {
     EnableBackHanle: boolean,
@@ -42,12 +43,16 @@ const ImageBGInfo: React.FC<ImageBGInfoProps> = ({
                 style={styles.ItemBGImage} >
                 {EnableBackHanle ? (
                     <View style={styles.ImageHeaderBarContainerWithBack} >
-                        <TouchableOpacity onPress={() => { BackHandler() }} >
+
+                        <TouchableOpacity
+                            onPress={() => { BackHandler() }} >
                             <GradiantBGIcon name='left' color={COLORS.primaryLightGreyHex} size={FONTSIZE.size_16} />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => {
-                            ToggleFavourite(favourite, type, id);
-                        }} >
+
+                        <TouchableOpacity
+                            onPress={() => {
+                                ToggleFavourite(favourite, type, id);
+                            }} >
                             <GradiantBGIcon name='like' color={favourite ? COLORS.primaryRedHex : COLORS.primaryLightGreyHex} size={FONTSIZE.size_16} />
                         </TouchableOpacity>
                     </View>
@@ -60,6 +65,38 @@ const ImageBGInfo: React.FC<ImageBGInfoProps> = ({
                         </TouchableOpacity>
                     </View>
                 )}
+                <View style={styles.ImgageInfoOuterContainer} >
+                    <View style={styles.ImgageInfoInnerContainer} >
+                        <View style={styles.InfoContainerRow} >
+                            <View>
+                                <Text style={styles.ItemTitleText} >{name}</Text>
+                                <Text style={styles.ItemSubTitleText} >{special_ingredient}</Text>
+                            </View>
+                            <View style={styles.ItemPropertiesContainer} >
+                                <View style={styles.ProperFirst} >
+                                    <CustomeIcon
+                                        name={type == "Bean" ? "bean" : "beans"}
+                                        size={type == "Bean" ? FONTSIZE.size_18 : FONTSIZE.size_24}
+                                        color={COLORS.primaryOrangeHex} />
+                                    <Text
+                                        style={[styles.PropertyTextFirst, { marginTop: type == "Bean" ? SPACING.space_4 + SPACING.space_2 : 0 }]} >{type}
+                                    </Text>
+                                </View>
+                                <View style={styles.ProperFirst} >
+                                    <CustomeIcon
+                                        name={type == "Bean" ? "location" : "drop"}
+                                        size={FONTSIZE.size_16}
+                                        color={COLORS.primaryOrangeHex} />
+                                    <Text
+                                        style={styles.PropertyTextFirst} >
+                                        {ingredients}
+                                    </Text>
+                                </View>
+                            </View>
+                            <View style={styles.InfoContainerRow} ></View>
+                        </View>
+                    </View>
+                </View>
             </ImageBackground>
         </View>
     )
@@ -84,5 +121,49 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "flex-end"
-    }
+    },
+    ImgageInfoOuterContainer: {
+        paddingVertical: SPACING.space_24,
+        paddingHorizontal: SPACING.space_30,
+        backgroundColor: COLORS.primaryBlackRGBA,
+        borderTopLeftRadius: BORDERRADIUS.radius_20 * 2,
+        borderTopRightRadius: BORDERRADIUS.radius_20 * 2,
+    },
+    ImgageInfoInnerContainer: {
+        justifyContent: "space-between",
+        gap: SPACING.space_15,
+    },
+    InfoContainerRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center"
+    },
+    ItemTitleText: {
+        fontFamily: FONTFAMILY.poppins_semibold,
+        fontSize: FONTSIZE.size_24,
+        color: COLORS.primaryWhiteHex
+    },
+    ItemSubTitleText: {
+        fontFamily: FONTFAMILY.poppins_medium,
+        fontSize: FONTSIZE.size_12,
+        color: COLORS.primaryWhiteHex
+    },
+    ItemPropertiesContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: SPACING.space_20
+    },
+    ProperFirst: {
+        height: 55,
+        width: 55,
+        borderRadius: BORDERRADIUS.radius_15,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: COLORS.primaryBlackHex
+    },
+    PropertyTextFirst: {
+        fontFamily: FONTFAMILY.poppins_medium,
+        fontSize: FONTSIZE.size_10,
+        color: COLORS.primaryWhiteHex
+    },
 })

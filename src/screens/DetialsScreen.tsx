@@ -9,7 +9,7 @@ const DetialsScreen = ({ navigation, route }: any) => {
   const ItemOfIndex = useStore((state: any) =>
     route.params.type == "Coffee" ? state.CoffeeList : state.BeanList,
   )[route.params.index];
-
+  
   const addTofavouriteList = useStore((state: any) => state.addTofavouriteList);
   const deleteFromfavouriteList = useStore((state: any) => state.deleteFromfavouriteList);
 
@@ -36,8 +36,8 @@ const DetialsScreen = ({ navigation, route }: any) => {
           id={ItemOfIndex.id}
           favourite={ItemOfIndex.favourite}
           name={ItemOfIndex.name}
-          special_ingredient={ItemOfIndex.special_ingreidient}
-          ingredients={ItemOfIndex.ingreidients}
+          special_ingredient={ItemOfIndex.special_ingredient}
+          ingredients={ItemOfIndex.ingredients}
           avg_rating={ItemOfIndex.avg_rating}
           rating_count={ItemOfIndex.rating_count}
           roasted={ItemOfIndex.roasted}
