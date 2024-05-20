@@ -68,7 +68,9 @@ const DetialsScreen = ({ navigation, route }: any) => {
                 </TouchableWithoutFeedback>
               )
           }
-          <Text style={styles.InfoTitle}>Size</Text>
+          <Text style={styles.InfoTitle}>
+            Size
+            </Text>
           <View style={styles.SizeOuterContainer} >
             {
               ItemOfIndex.prices.map((data: any) => {
