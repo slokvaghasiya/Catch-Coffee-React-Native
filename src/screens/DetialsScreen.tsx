@@ -1,17 +1,18 @@
 import { ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native'
 import React, { useState } from 'react'
 import { useStore } from '../store/Store'
-import { COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme';
+import { BORDERRADIUS, COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme';
 import ImageBGInfo from '../components/ImageBGInfo';
 
 const DetialsScreen = ({ navigation, route }: any) => {
 
   const ItemOfIndex = useStore((state: any) =>
-    route.params.type == "Coffee" ? state.CoffeeList : state.BeanList,
+    route.params.type == "Coffee" ? state.CoffeeList : state.BeansList,
   )[route.params.index];
 
   const [fullDesc, setFullDesc] = useState(false)
   const [price, setPrice] = useState(ItemOfIndex.prices[0])
+
 
   const addTofavouriteList = useStore((state: any) => state.addTofavouriteList);
   const deleteFromfavouriteList = useStore((state: any) => state.deleteFromfavouriteList);
@@ -70,23 +71,29 @@ const DetialsScreen = ({ navigation, route }: any) => {
           }
           <Text style={styles.InfoTitle}>
             Size
-            </Text>
+          </Text>
           <View style={styles.SizeOuterContainer} >
             {
-              ItemOfIndex.prices.map((data: any) => {
-                <TouchableOpacity key={data.size} style={[styles.SizeBox]} >
+              ItemOfIndex.prices.map((data: any) => (
+
+                <TouchableOpacity
+                  key={data.size}
+                  onPress={()=>{
+                    setPrice(data)
+                  }}
+                  style={[styles.SizeBox, { borderColor: data.size === price.size ? COLORS.primaryOrangeHex : COLORS.primaryDarkGreyHex }]} >
 
                   <Text style={[styles.SizeText, {
                     fontSize: ItemOfIndex.type == "bean" ? FONTSIZE.size_14 : FONTSIZE.size_16,
-                  }]} >
-                    {data.size}
+                    color: data.size == price.size ? COLORS.primaryOrangeHex : COLORS.secondaryLightGreyHex
+                  }]} >{data.size}
                   </Text>
-
                 </TouchableOpacity>
-              })
+              ))
             }
           </View>
         </View>
+        
       </ScrollView>
     </View>
   )
@@ -118,9 +125,24 @@ const styles = StyleSheet.create({
     marginBottom: SPACING.space_30,
     letterSpacing: 0.5
   },
-  SizeOuterContainer: {},
-  SizeBox: {},
-  SizeText: {},
+  SizeOuterContainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    gap: SPACING.space_20
+  },
+  SizeBox: {
+    flex: 1,
+    backgroundColor: COLORS.primaryDarkGreyHex,
+    alignItems: "center",
+    justifyContent: "center",
+    height: SPACING.space_24 * 2,
+    borderRadius: BORDERRADIUS.radius_10,
+    borderWidth: 2
+  },
+  SizeText: {
+    fontFamily: FONTFAMILY.poppins_medium
+  },
 })
 
 export default DetialsScreen
