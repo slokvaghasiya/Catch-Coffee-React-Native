@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useStore } from '../store/Store'
 import { BORDERRADIUS, COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme';
 import ImageBGInfo from '../components/ImageBGInfo';
+import PaymentFooter from '../components/PaymentFooter';
 
 const DetialsScreen = ({ navigation, route }: any) => {
 
@@ -93,7 +94,7 @@ const DetialsScreen = ({ navigation, route }: any) => {
             }
           </View>
         </View>
-        
+        <PaymentFooter price={price} buttonTitle="Add To Cart" buttonPressHandler={() => {  }} />
       </ScrollView>
     </View>
   )
@@ -106,7 +107,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primaryBlackHex
   },
   ScrollViewFlex: {
-    flexGrow: 1
+    flexGrow: 1,
+    justifyContent:"space-between"
   },
   FooterInfoArea: {
     padding: SPACING.space_20,
