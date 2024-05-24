@@ -17,6 +17,8 @@ const DetialsScreen = ({ navigation, route }: any) => {
 
   const addTofavouriteList = useStore((state: any) => state.addTofavouriteList);
   const deleteFromfavouriteList = useStore((state: any) => state.deleteFromfavouriteList);
+  const addToCart = useStore((state: any) => state.addToCart);
+  const calculateCartPrice = useStore((state: any) => state.calculateCartPrice);
 
   const BackHandler = () => {
     navigation.pop()
@@ -24,6 +26,14 @@ const DetialsScreen = ({ navigation, route }: any) => {
 
   const ToggleFavourite = (favourite: boolean, type: string, id: string) => {
     favourite ? deleteFromfavouriteList(type, id) : addTofavouriteList(type, id)
+  }
+
+  const addToCartHandle = ({ id, index, name, roasted, imagelink_square, special_ingredient, type, price }: any) => {
+    addToCart({
+      id, index, name, roasted, imagelink_square, special_ingredient, type, prices: [{ ...price, quantity: 1 }],
+    });
+    calculateCartPrice();
+    navigation.navigate("Cart")
   }
 
   return (
@@ -79,7 +89,7 @@ const DetialsScreen = ({ navigation, route }: any) => {
 
                 <TouchableOpacity
                   key={data.size}
-                  onPress={()=>{
+                  onPress={() => {
                     setPrice(data)
                   }}
                   style={[styles.SizeBox, { borderColor: data.size === price.size ? COLORS.primaryOrangeHex : COLORS.primaryDarkGreyHex }]} >
@@ -94,7 +104,22 @@ const DetialsScreen = ({ navigation, route }: any) => {
             }
           </View>
         </View>
-        <PaymentFooter price={price} buttonTitle="Add To Cart" buttonPressHandler={() => {  }} />
+        <PaymentFooter
+          price={price}
+          buttonTitle="Add To Cart"
+          buttonPressHandler={() => {
+            addToCartHandle({
+              id: ItemOfIndex.id,
+              index: ItemOfIndex.index,
+              name: ItemOfIndex.name,
+              roasted: ItemOfIndex.roasted,
+              imagelink_square: ItemOfIndex.imagelink_square,
+              special_ingredient: ItemOfIndex.special_ingredient,
+              type: ItemOfIndex.type,
+              price: price
+            })
+
+          }} />
       </ScrollView>
     </View>
   )
@@ -108,7 +133,7 @@ const styles = StyleSheet.create({
   },
   ScrollViewFlex: {
     flexGrow: 1,
-    justifyContent:"space-between"
+    justifyContent: "space-between"
   },
   FooterInfoArea: {
     padding: SPACING.space_20,

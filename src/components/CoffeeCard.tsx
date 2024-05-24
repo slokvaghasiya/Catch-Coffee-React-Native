@@ -11,8 +11,8 @@ interface CoffeeCardProp {
   id: string,
   index: number,
   type: string,
-  rosted: string,
-  imageLink_square: ImageProps,
+  roasted: string,
+  imagelink_square: ImageProps,
   name: string,
   special_ingredient: string,
   avg_rating: number,
@@ -22,19 +22,19 @@ interface CoffeeCardProp {
 }
 
 const CoffeeCard: React.FC<CoffeeCardProp> = ({
-  id, index, type, rosted, imageLink_square, name, special_ingredient, avg_rating, price, buttonPressHandler }) => {
+  id, index, type, roasted, imagelink_square, name, special_ingredient, avg_rating, price, buttonPressHandler }) => {
   return (
     <View>
       <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.CradLinearGradientContainer} colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]} >
         <ImageBackground
-          source={imageLink_square}
+          source={imagelink_square}
           style={styles.CardImageBG}
           resizeMode='cover'>
           <View style={styles.CardRatingContainer}  >
-            <CustomeIcon 
-            name={"star"} 
-            color={COLORS.primaryOrangeHex} 
-            size={FONTSIZE.size_16} 
+            <CustomeIcon
+              name={"star"}
+              color={COLORS.primaryOrangeHex}
+              size={FONTSIZE.size_16}
             />
             <Text style={styles.CardRatingText} >{avg_rating}</Text>
           </View>
@@ -43,7 +43,10 @@ const CoffeeCard: React.FC<CoffeeCardProp> = ({
         <Text style={styles.CardSubTitle} > {special_ingredient} </Text>
         <View style={styles.CardFooterRow} >
           <Text style={styles.CardPriceCurrency} >$<Text style={styles.CardPrice} >{price.price}</Text></Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={
+            () => {
+              buttonPressHandler({ id, index, name, roasted, imagelink_square, special_ingredient, type, prices: [{ ...price, quantity: 1 }] })
+            }} >
             <BGIcon name={"add"} color={COLORS.primaryWhiteHex} BGColor={COLORS.primaryOrangeHex} size={FONTSIZE.size_10} />
           </TouchableOpacity>
         </View>
@@ -55,8 +58,8 @@ const CoffeeCard: React.FC<CoffeeCardProp> = ({
 
 const styles = StyleSheet.create({
   CradLinearGradientContainer: {
-    padding:SPACING.space_15,
-    borderRadius:BORDERRADIUS.radius_25
+    padding: SPACING.space_15,
+    borderRadius: BORDERRADIUS.radius_25
   },
   CardImageBG: {
     width: CARD_WIDTH,
@@ -84,28 +87,28 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.size_14,
     lineHeight: 22
   },
-  CardTitle:{
+  CardTitle: {
     fontFamily: FONTFAMILY.poppins_medium,
     color: COLORS.primaryWhiteHex,
     fontSize: FONTSIZE.size_16,
   },
-  CardSubTitle:{
+  CardSubTitle: {
     fontFamily: FONTFAMILY.poppins_light,
     color: COLORS.primaryWhiteHex,
     fontSize: FONTSIZE.size_10,
   },
   CardFooterRow: {
-    flexDirection:'row',
-    justifyContent:"space-between",
-    alignItems:"center",
-    marginTop:SPACING.space_15
+    flexDirection: 'row',
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: SPACING.space_15
   },
-  CardPriceCurrency:{
+  CardPriceCurrency: {
     fontFamily: FONTFAMILY.poppins_semibold,
     color: COLORS.primaryOrangeHex,
     fontSize: FONTSIZE.size_18,
   },
-  CardPrice:{
+  CardPrice: {
     color: COLORS.primaryWhiteHex,
   }
 })

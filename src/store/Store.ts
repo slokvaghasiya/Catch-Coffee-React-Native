@@ -12,25 +12,26 @@ export const useStore = create(
             BeansList: BeansData,
             CartPrice: 0,
             FavouriteList: [],
-            CartList: [],
+            Cart: [],
             OrderHistoryList: [],
             addToCart: (cartItem: any) => set(produce(state => {
                 let found = false;
-                for (let i = 0; i < state.CartList.length; i++) {
-                    if (state.CartList[i].id == cartItem.id) {
+                for (let i = 0; i < state.Cart.length; i++) {
+
+                    if (state.Cart[i].id == cartItem.id) {
                         found = true;
                         let size = false;
-                        for (let j = 0; j < state.CartList[i].prices.length; j++) {
-                            if (state.CartList[i].prices[j].size == cartItem.prices[0].size) {
+                        for (let j = 0; j < state.Cart[i].prices.length; j++) {
+                            if (state.Cart[i].prices[j].size == cartItem.prices[0].size) {
                                 size = true;
-                                state.CartList[i].prices[j].quantity++;
+                                state.Cart[i].prices[j].quantity++;
                                 break;
                             }
                         }
                         if (size == false) {
-                            state.CartList[i].prices.push(cartItem.prices[0])
+                            state.Cart[i].prices.push(cartItem.prices[0]);
                         }
-                        state.CartList[i].prices.sort((a: any, b: any) => {
+                        state.Cart[i].prices.sort((a: any, b: any) => {
                             if (a.size > b.size) {
                                 return -1;
                             }
@@ -43,22 +44,24 @@ export const useStore = create(
                     }
                 }
                 if (found == false) {
-                    state.CartList.push(cartItem)
+                    state.Cart.push(cartItem);
+                    console.log("CARt..",state.Cart);
+                    
                 }
-            })
+            }),
             ),
 
             calculateCartPrice: () => set(produce(state => {
                 let totalPrice = 0;
-                for (let i = 0; i < state.CartList.length; i++) {
+                for (let i = 0; i < state.Cart.length; i++) {
                     let tempPrice = 0;
-                    for (let j = 0; j < state.CartList[i].prices.length; j++) {
-                        tempPrice = tempPrice + parseFloat(state.CartList[i].prices[j].price) * state.CartList[i].prices[j].quantity;
+                    for (let j = 0; j < state.Cart[i].prices.length; j++) {
+                        tempPrice = tempPrice + parseFloat(state.Cart[i].prices[j].price) * state.Cart[i].prices[j].quantity;
                     }
-                    state.CartList[i].ItemPrice = tempPrice.toFixed(2).toString();
-                    totalPrice += tempPrice;
+                    state.Cart[i].ItemPrice = tempPrice.toFixed(2).toString();
+                    totalPrice = totalPrice + tempPrice;
                 }
-                state.CartList = totalPrice.toFixed(2).toString();
+                state.Cart = totalPrice.toFixed(2).toString();
             })
             ),
 
@@ -96,7 +99,7 @@ export const useStore = create(
                             if (state.CoffeeList[i].id == id) {
                                 if (state.CoffeeList[i].favourite == true) {
                                     state.CoffeeList[i].favourite = false;
-                                    
+
                                 }
                                 break;
                             }
