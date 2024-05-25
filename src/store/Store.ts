@@ -45,8 +45,6 @@ export const useStore = create(
                 }
                 if (found == false) {
                     state.Cart.push(cartItem);
-                    console.log("CARt..",state.Cart);
-                    
                 }
             }),
             ),
@@ -122,7 +120,68 @@ export const useStore = create(
                         }
                     }
                     state.FavouriteList.splice(spliceIndex, 1)
-                }))
+                })),
+
+            incrementCartItemQuantity: (id: string, size: string) =>
+                set(produce(state => {
+                    for (let i = 0; i < state.Cart.length; i++) {
+                        if (state.Cart[i].id == id) {
+                            for (let j = 0; j < state.Cart[i].prices.length; j++) {
+                                if (state.Cart[i].prices[j].size == size) {
+                                    state.Cart[i].prices[j].quantity++;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                })
+                ),
+            decrementCartItemQuantity: (id: string, size: string) =>
+                set(produce(state => {
+                    for (let i = 0; i < state.Cart.length; i++) {
+                        if (state.Cart[i].id == id) {
+                            for (let j = 0; j < state.Cart[i].prices.length; j++) {
+                                if (state.Cart[i].prices[j].size == size) {
+                                    if (state.Cart[i].prices.length > 1) {
+                                        if (state.Cart[i].prices[j].quantity > 1) {
+                                            state.Cart[i].prices[j].quantity--;
+                                        } else {
+                                            state.Cart[i].prices[j].splice(j, 1)
+                                        }
+                                    } else {
+                                        if (state.Cart[i].prices[j].quantity > 1) {
+                                            state.Cart[i].prices[j].quantity--;
+                                        } else {
+                                            state.Cart.splice(i, 1)
+                                        }
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                })
+                ),
+            addToOrderHistoryList: () =>
+                set(produce(state => {
+                    let temp = state.Cart.reduce((accumulator: number, currentValue: any) => accumulator + parseFloat(currentValue.ItemPrice), 0);
+                    let currentCartTotalPrice = temp.toFixed(2).toString();
+                    if (state.OrderHistoryList.length > 0) {
+                        state.OrderHistoryList.unshift({
+                            OrderDate: new Date().toDateString() + "" + new Date().toTimeString(),
+                            CartList: state.Cart,
+                            CartListPrice: temp.toFixed(2).toString(),
+                        })
+                    } else {
+                        state.OrderHistoryList.push({
+                            OrderDate: new Date().toDateString() + "" + new Date().toTimeString(),
+                            CartList: state.Cart,
+                            CartListPrice: temp.toFixed(2).toString(),
+                        })
+                    }
+                    state.Cart = [];
+                })
+                )
         }),
         {
             name: 'coffee-app',
