@@ -58,8 +58,10 @@ export const useStore = create(
                     }
                     state.Cart[i].ItemPrice = tempPrice.toFixed(2).toString();
                     totalPrice = totalPrice + tempPrice;
+                    console.log("total..",totalPrice);
+                    
                 }
-                state.Cart = totalPrice.toFixed(2).toString();
+                state.CartPrice = totalPrice.toFixed(2).toString();
             })
             ),
 

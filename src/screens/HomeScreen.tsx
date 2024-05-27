@@ -50,7 +50,7 @@ const HomeScreen = ({ navigation }: any) => {
     addToCart({
       id, index, name, roasted, imagelink_square, special_ingredient, type, prices
     });
-    // calculateCartPrice();
+    calculateCartPrice();
     ToastAndroid.showWithGravity(`${name} is Added to Cart`, ToastAndroid.SHORT, ToastAndroid.CENTER)
   }
 
