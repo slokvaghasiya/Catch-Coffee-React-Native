@@ -50,8 +50,8 @@ const CartScreen = ({ navigation, route }: any) => {
                           roasted={data.roasted}
                           type={data.type}
                           prices={data.prices}
-                          incrementCartItemQuantity={()=>{}}
-                          decrementCartItemQuantity={()=>{}}
+                          incrementCartItemQuantityHandler={()=>{}}
+                          decrementCartItemQuantityHandler={()=>{}}
     />
                         </TouchableOpacity>
                       ))
