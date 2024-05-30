@@ -17,12 +17,19 @@ const CartScreen = ({ navigation, route }: any) => {
   const decrementCartItemQuantity = useStore((state: any) => state.decrementCartItemQuantity)
   const calculateCartPrice = useStore((state: any) => state.calculateCartPrice)
 
-  console.log("DATA...", Cart);
-
-  const tabBatHeight = useBottomTabBarHeight();
+  const tabBarHeight = useBottomTabBarHeight();
 
   const buttonPressHandler = () => {
     navigation.push("Payment")
+  }
+
+  const incrementCartItemQuantityHandler = (id: String, size: string) => {
+    incrementCartItemQuantity(id, size)
+    calculateCartPrice()
+  }
+  const decrementCartItemQuantityHandler = (id: String, size: string) => {
+    decrementCartItemQuantity(id, size)
+    calculateCartPrice()
   }
 
   return (
@@ -32,7 +39,7 @@ const CartScreen = ({ navigation, route }: any) => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.ScrollViewFlex}
       >
-        <View style={[styles.ScrollViewInner, { marginBottom: tabBatHeight }]} >
+        <View style={[styles.ScrollViewInner, { marginBottom: tabBarHeight }]} >
           <View style={styles.ItemContainer} >
             <HeaderBar title='Cart' />
             {
@@ -41,18 +48,20 @@ const CartScreen = ({ navigation, route }: any) => {
                   <View style={styles.ListItemContainer} >
                     {
                       Cart.map((data: any) => (
-                        <TouchableOpacity onPress={() => { }} key={data.id} >
+                        <TouchableOpacity onPress={() => {
+                          navigation.push("Details", { index: data.index, id: data.id, type: data.type })
+                        }} key={data.id} >
                           <CartItem
-                          id={data.id}
-                          name={data.name}
-                          imagelink_square={data.imagelink_square}
-                          special_ingredient={data.special_ingredient}
-                          roasted={data.roasted}
-                          type={data.type}
-                          prices={data.prices}
-                          incrementCartItemQuantityHandler={()=>{}}
-                          decrementCartItemQuantityHandler={()=>{}}
-    />
+                            id={data.id}
+                            name={data.name}
+                            imagelink_square={data.imagelink_square}
+                            special_ingredient={data.special_ingredient}
+                            roasted={data.roasted}
+                            type={data.type}
+                            prices={data.prices}
+                            incrementCartItemQuantityHandler={incrementCartItemQuantityHandler}
+                            decrementCartItemQuantityHandler={decrementCartItemQuantityHandler}
+                          />
                         </TouchableOpacity>
                       ))
                     }

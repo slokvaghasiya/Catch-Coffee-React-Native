@@ -53,6 +53,7 @@ const CartItem: React.FC<CartItemProps> = ({
                     {
                         prices.map((data: any, index: any) => (
                             <View key={index.toString()} style={styles.CartItemSizeContainer} >
+
                                 <View style={styles.CartItemSizeValueContainer} >
 
                                     <View style={styles.SizeBox} >
@@ -98,6 +99,43 @@ const CartItem: React.FC<CartItemProps> = ({
                         <Image source={imagelink_square} style={styles.CartItemSingleImage} />
                     </View>
 
+                    <View style={styles.CartItemSingleInfoContainer} >
+
+                        <View>
+                            <Text style={styles.CartItemTitle} >{name}</Text>
+                            <Text style={styles.CartItemSUBTitle} >{special_ingredient}</Text>
+                        </View>
+                        
+                        <View style={styles.CartItemSingleSizeValueContainer} >
+                            <View style={styles.SizeBox} >
+                                <Text style={[styles.SizeText, { fontSize: type == "beans" ? FONTSIZE.size_12 : FONTSIZE.size_16 }]} >
+                                    {prices[0].size}
+                                </Text>
+                            </View>
+                            <Text style={styles.SizeCurrency} >{prices[0].currency}<Text style={styles.SizePrice} > {prices[0].price}</Text></Text>
+                        </View>
+                        <View style={styles.CartItemSingleQuantityContainer} >
+                            <TouchableOpacity
+                                style={styles.CartItemIcon}
+                                onPress={() => {
+                                    decrementCartItemQuantityHandler(id, prices[0].size)
+                                }}
+                            >
+                                <CustomeIcon name='minus' color={COLORS.primaryWhiteHex} size={FONTSIZE.size_10} />
+                            </TouchableOpacity>
+                            <View style={styles.CartItemQuantityContainer} >
+                                <Text style={styles.CartItemQuantityText} >{prices[0].quantity}</Text>
+                            </View>
+                            <TouchableOpacity
+                                style={styles.CartItemIcon}
+                                onPress={() => {
+                                    incrementCartItemQuantityHandler(id, prices[0].size)
+                                }}
+                            >
+                                <CustomeIcon name='add' color={COLORS.primaryWhiteHex} size={FONTSIZE.size_10} />
+                            </TouchableOpacity>
+                        </View>
+                    </View>
                 </LinearGradient>)}
         </View>
     )
@@ -203,16 +241,31 @@ const styles = StyleSheet.create({
         color: COLORS.primaryWhiteHex
     },
     CartItemSingleLinearGradient: {
-        flexDirection:"row",
-        alignItems:"center",
-        padding:SPACING.space_12,
-        gap:SPACING.space_12,
+        flexDirection: "row",
+        alignItems: "center",
+        padding: SPACING.space_12,
+        gap: SPACING.space_12,
         borderRadius: BORDERRADIUS.radius_25
     },
     CartItemSingleImage: {
         height: 150,
-        width: 130,
+        width: 150,
         borderRadius: BORDERRADIUS.radius_20
+    },
+    CartItemSingleInfoContainer: {
+        flex: 1,
+        alignSelf: "stretch",
+        justifyContent: "space-around"
+    },
+    CartItemSingleSizeValueContainer: {
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        alignItems: "center"
+    },
+    CartItemSingleQuantityContainer: {
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        alignItems: "center"
     },
 })
 

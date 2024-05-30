@@ -58,7 +58,6 @@ export const useStore = create(
                     }
                     state.Cart[i].ItemPrice = tempPrice.toFixed(2).toString();
                     totalPrice = totalPrice + tempPrice;
-                    console.log("total..",totalPrice);
                     
                 }
                 state.CartPrice = totalPrice.toFixed(2).toString();
@@ -148,7 +147,7 @@ export const useStore = create(
                                         if (state.Cart[i].prices[j].quantity > 1) {
                                             state.Cart[i].prices[j].quantity--;
                                         } else {
-                                            state.Cart[i].prices[j].splice(j, 1)
+                                            state.Cart[i].prices.splice(i, 1)
                                         }
                                     } else {
                                         if (state.Cart[i].prices[j].quantity > 1) {
