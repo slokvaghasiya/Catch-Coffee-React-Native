@@ -51,13 +51,14 @@ const PaymentScreen = ({ navigation, route }: any) => {
       navigation.navigate("History")
     }, 2000)
   }
+
   return (
     <View style={styles.ScreenContainer} >
       <StatusBar backgroundColor={COLORS.primaryBlackHex} />
       {
         showAnimation ? (
-        <PopupAnimatiom style={styles.LottieAnimation} source={require('../lottie/successful.json')} />
-      ) :( <></>)
+          <PopupAnimatiom style={styles.LottieAnimation} source={require('../lottie/successful.json')} />
+        ) : (<></>)
       }
       <ScrollView
         showsVerticalScrollIndicator={false}
