@@ -30,15 +30,18 @@ const OrderHistoryCard: React.FC<OrderHistoryCardProps> = ({
             </View>
             <View style={styles.ListContainer} >
                 {
-                    CartList.map((data:any,index:any)=>(
-                        <TouchableOpacity key={index.toString() + data.id} >
-                            <OderItemCard 
-                            type={data.type} 
-                            name={data.name}
-                            imagelink_square={data.imagelink_square}
-                            special_ingredient={data.special_ingredient}
-                            prices={data.prices}
-                            itemPrice={data.ItemPrice}
+                    CartList.map((data: any, index: any) => (
+                        <TouchableOpacity key={index.toString() + data.id} 
+                        onPress={() => {
+                            navigationHandler({ index: data.index, id: data.id, type: data.type })
+                        }} >
+                            <OderItemCard
+                                type={data.type}
+                                name={data.name}
+                                imagelink_square={data.imagelink_square}
+                                special_ingredient={data.special_ingredient}
+                                prices={data.prices}
+                                itemPrice={data.ItemPrice}
                             />
                         </TouchableOpacity>
                     ))
@@ -51,34 +54,34 @@ const OrderHistoryCard: React.FC<OrderHistoryCardProps> = ({
 
 const styles = StyleSheet.create({
     CardConatiner: {
-        gap:SPACING.space_10,
+        gap: SPACING.space_10,
     },
     CardHeader: {
-        flexDirection:"row",
-        justifyContent:"space-around",
-        gap:SPACING.space_20,
-        alignItems:"center"
+        flexDirection: "row",
+        justifyContent: "space-around",
+        gap: SPACING.space_20,
+        alignItems: "center"
     },
     HeaderTitle: {
-        fontFamily:FONTFAMILY.poppins_semibold,
-        fontSize:FONTSIZE.size_16,
-        color:COLORS.primaryWhiteHex
+        fontFamily: FONTFAMILY.poppins_semibold,
+        fontSize: FONTSIZE.size_16,
+        color: COLORS.primaryWhiteHex
     },
     HeaderSubTitle: {
-        fontFamily:FONTFAMILY.poppins_light,
-        fontSize:FONTSIZE.size_16,
-        color:COLORS.primaryWhiteHex
+        fontFamily: FONTFAMILY.poppins_light,
+        fontSize: FONTSIZE.size_16,
+        color: COLORS.primaryWhiteHex
     },
     PriceConatiner: {
-        alignItems:"flex-end"
+        alignItems: "flex-end"
     },
     HeaderPrice: {
-        fontFamily:FONTFAMILY.poppins_medium,
-        fontSize:FONTSIZE.size_18,
-        color:COLORS.primaryOrangeHex
+        fontFamily: FONTFAMILY.poppins_medium,
+        fontSize: FONTSIZE.size_18,
+        color: COLORS.primaryOrangeHex
     },
     ListContainer: {
-        gap:SPACING.space_20,
+        gap: SPACING.space_20,
     },
 })
 export default OrderHistoryCard

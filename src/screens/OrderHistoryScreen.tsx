@@ -1,52 +1,75 @@
-import { ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { useStore } from '../store/Store'
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs'
-import { COLORS, SPACING } from '../theme/theme'
+import { BORDERRADIUS, COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme'
 import HeaderBar from '../components/HeaderBar'
 import EmptyListAnimation from '../components/EmptyListAnimation'
 import PopupAnimatiom from '../components/PopupAnimatiom'
 import OrderHistoryCard from '../components/OrderHistoryCard'
 
-const OrderHistoryScreen = () => {
+const OrderHistoryScreen = ({ navigation }: any) => {
 
   const [showAnimation, setShowAnimation] = useState(false);
   const OrderHistoryList = useStore((state: any) => state.OrderHistoryList)
-  console.log("History..",OrderHistoryList.length);
-  
+
   const tabBarHeight = useBottomTabBarHeight();
-  
+  const buttonPressHandler = ()=>{
+    setShowAnimation(true)
+    setTimeout(()=>{
+      setShowAnimation(false)
+
+    },2000)
+  }
+
+  const navigationHandler = ({ index, id, type }: any) => {
+    navigation.push("Details", { index, id, type })
+  }
 
   return (
     <View style={styles.ScreenContainer} >
       <StatusBar backgroundColor={COLORS.primaryBlackHex} />
       {
         showAnimation ? (
-          <PopupAnimatiom style={styles.LottieAnimation} source={require('../lottie/successful.json')} />
+          <PopupAnimatiom style={styles.LottieAnimation} source={require('../lottie/download.json')} />
         ) : (<></>)
       }
-      <ScrollView  
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={[styles.ScrollViewFlex,{marginBottom:tabBarHeight}]}
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.ScrollViewFlex}
       >
+        <View style={[styles.ScrollViewInnerView, { marginBottom: tabBarHeight }]} >    
         <View style={styles.ItemContainer} >
-        <HeaderBar title='Order History' />
-        {
-          OrderHistoryList.length == 0 ? (<EmptyListAnimation title={"No Order History"} />) :
-          (
-            <View style={styles.ListItemContainer} >
-              {
-                OrderHistoryList.map((data:any,index:any)=>(
-                  <OrderHistoryCard 
-                  key={index.toString()} 
-                  navigationHandler={()=>{}}
-                  CartList={data.CartList}
-                  CartListPrice={data.CartListPrice}
-                  orderDate={data.OrderDate} />
-                ))
-              }
-            </View> )
-        }
+          <HeaderBar title='Order History' />
+          {
+            OrderHistoryList.length == 0 ? (<EmptyListAnimation title={"No Order History"} />) :
+              (
+                <View style={styles.ListItemContainer} >
+                  {
+                    OrderHistoryList.map((data: any, index: any) => (
+                      <OrderHistoryCard
+                        key={index.toString()}
+                        navigationHandler={navigationHandler}
+                        CartList={data.CartList}
+                        CartListPrice={data.CartListPrice}
+                        orderDate={data.OrderDate} />
+                    ))
+                  }
+                </View>
+                )
+          }
+          </View>
+          {
+            OrderHistoryList.length > 0 ? (
+              <TouchableOpacity style={styles.DownloadButton} onPress={()=>{
+                buttonPressHandler()
+              }} >
+                <Text style={styles.buttonText} >Download</Text>
+              </TouchableOpacity> 
+            ) : (
+              <></>
+            )
+          }
         </View>
       </ScrollView>
     </View>
@@ -60,12 +83,12 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primaryBlackHex
   },
   LottieAnimation: {
-    height:250
+    height: 250
   },
   ScrollViewFlex: {
     flexGrow: 1
   },
-  ScrollViewInner: {
+  ScrollViewInnerView:  {
     flex: 1,
     justifyContent: "space-between",
   },
@@ -75,6 +98,19 @@ const styles = StyleSheet.create({
   ListItemContainer: {
     paddingHorizontal: SPACING.space_20,
     gap: SPACING.space_20
+  },
+  DownloadButton: {
+    margin:SPACING.space_20,
+    backgroundColor: COLORS.primaryOrangeHex,
+    alignItems:"center",
+    justifyContent:"center",
+    height:SPACING.space_36*2,
+    borderRadius:BORDERRADIUS.radius_20
+  },
+  buttonText: {
+    fontFamily:FONTFAMILY.poppins_semibold,
+    fontSize:FONTSIZE.size_18,
+    color:COLORS.primaryWhiteHex
   },
 })
 

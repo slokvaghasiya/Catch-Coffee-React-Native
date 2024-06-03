@@ -136,7 +136,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primaryBlackHex
   },
   LottieAnimation: {
-    flex: 1
+    // flex: 1,
+    height:250
   },
   ScrollViewFlex: {
     flexGrow: 1,
