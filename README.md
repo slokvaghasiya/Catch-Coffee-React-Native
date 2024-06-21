@@ -1,8 +1,44 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<h1 align="center">Catch-Coffee</h1>
 
-# Getting Started
+###
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+<h2 align="left">📓About Project</h2>
+
+###
+
+<p align="left">✨ A mobile application for coffee lovers to discover and catch their favorite coffee shops, built using React Native.Catch Coffee is a mobile application designed for coffee enthusiasts to discover new coffee shops and track their favorites. This app is built using React Native to ensure cross-platform compatibility on both iOS and Android devices.</p>
+
+###
+
+<h2 align="left">💻I code with</h2>
+
+###
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
+</div>
+
+###
+
+<h2 align="left">💡Features</h2>
+
+###
+
+<p align="left">1.Favorites: Save and manage your favorite coffee.<br>2. Payment: Payment price according to list of item in cart.<br>3. Responsive Design: Optimized for both iOS and Android devices.<br>4. Payment History: Save History of payment done.</p>
+
+### <h2 align="left">🧰Installation</h2>
+
+###
+
+<h4 align="left">1. Clone the repository<br>git clone https://github.com/slokvaghasiya/Catch-Coffee-React-Native.git</h4>
+
+###
+
+<h4 align="left">2. Navigate to the project directory<br>cd Catch-Coffee-React-Native</h4>
 
 ## Step 1: Start the Metro Server
 
